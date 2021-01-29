@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: #747B95;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  color: #333950;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #333950;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 3rem;
+  color: #333950;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.button {
+  padding: 0.875rem 3.4375rem;
+  font-weight: 700;
+  border-radius: 1.75rem;
+}
+
+.button--dark-blue {
+  color: white;
+  background-color: #5175FF;
+}
+
+.button--dark-blue:hover {
+  background-color: #829CFF;
+}
+
+.button--light-blue {
+  color: #5175FF;
+  background-color: rgba(81, 117, 255, 0.15);
+}
+
+.button--light-blue:hover {
+  background-color: rgba(81, 117, 255, 0.25);
+}
+
+.button--white {
+  border: 1px solid black;
+  color: #5175FF;
+  background-color: white;
+}
+
+.button--white:hover {
+  color: #829CFF;
+}
+/*# sourceMappingURL=style.css.map */

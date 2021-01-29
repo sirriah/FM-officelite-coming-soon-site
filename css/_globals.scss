@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    //font-size: 1.125rem;
+    color: $grayLighter;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    color: $grayMiddle;
+}
+
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: $grayMiddle;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 3rem;
+    color: $grayMiddle;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.button{
+    padding: 0.875rem 3.4375rem;
+    font-weight: 700;
+    border-radius: 1.75rem;
+}
+
+.button--dark-blue{
+    color: white;
+    background-color: $primary1;
+
+    &:hover{
+        background-color: $primary2;
+    }
+}
+
+.button--light-blue{
+    color: $primary1;
+    background-color: $primary--lighter;
+
+    &:hover {
+        background-color: $primary--light;
+    }
+}
+
+.button--white{
+    border: 1px solid black;
+    color: $primary1;
+    background-color: white;
+
+    &:hover {
+        color: $primary2;
+    }
+}
