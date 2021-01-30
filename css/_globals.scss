@@ -1,10 +1,10 @@
 body{
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif;
-    //font-size: 1.125rem;
     color: $grayLighter;
     font-weight: 300;
     line-height: 1.75;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -32,6 +32,61 @@ a {
     font-weight: 400;
 }
 
+.font--bigger{
+    font-size: 1.125rem;
+}
+
+// for screen readers only
+.sr-text{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+    color: transparent;
+    overflow: hidden;
+}
+
+
+// form fields input
+input[type=text]{
+    border: none;
+    border-bottom: 1px solid $grayLighter;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: $grayOpacity;
+}
+  
+:-ms-input-placeholder { /* Internet Explorer */
+    color: $grayOpacity;
+}
+  
+::placeholder {
+    color: $grayOpacity;
+}
+
+input.error{
+    border-bottom: 1px solid $error;
+    color: $error;
+}
+
+// form fields select
+select {
+    border: none;
+    border-bottom: 1px solid $grayLighter;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    display: none; /*hide original SELECT element: */
+}
+
+// https://www.w3schools.com/howto/howto_custom_select.asp
+
+
+
 .button{
     padding: 0.875rem 3.4375rem;
     font-weight: 700;
@@ -49,10 +104,10 @@ a {
 
 .button--light-blue{
     color: $primary1;
-    background-color: $primary--lighter;
+    background-color: $primaryLighter;
 
     &:hover {
-        background-color: $primary--light;
+        background-color: $primaryLight;
     }
 }
 
@@ -65,3 +120,4 @@ a {
         color: $primary2;
     }
 }
+
