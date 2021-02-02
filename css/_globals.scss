@@ -1,10 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body{
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif;
     color: $grayLighter;
     font-weight: 300;
     line-height: 1.75;
-    box-sizing: border-box;
+    background-color: #FAFAFA;
 }
 
 h1 {
@@ -54,6 +60,20 @@ input[type=text]{
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 1rem;
     padding: 1rem;
+    background-color: transparent;
+
+    &.error{
+        border-bottom: 1px solid $error;
+        color: $error;
+        position: relative;
+
+        &::after{
+            content: url("./../assets/sign-up/icon-cross.svg");
+            position: absolute;
+            right: 1rem;
+        }
+    }
+    
 }
 
 ::-webkit-input-placeholder { /* Edge */
@@ -67,24 +87,6 @@ input[type=text]{
 ::placeholder {
     color: $grayOpacity;
 }
-
-input.error{
-    border-bottom: 1px solid $error;
-    color: $error;
-}
-
-// form fields select
-select {
-    border: none;
-    border-bottom: 1px solid $grayLighter;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 1rem;
-    padding: 1rem;
-    display: none; /*hide original SELECT element: */
-}
-
-// https://www.w3schools.com/howto/howto_custom_select.asp
-
 
 
 .button{
