@@ -5,8 +5,9 @@ const options = document.getElementById("custom-options");
 const optionsList = document.getElementById("custom-options").children;
 //const singleOption = document.querySelector(".custom-options--is-selected");
 
+// display the options menu
 selectTag.addEventListener("click", function () {
-  console.log("kliknuto");
+  console.log("click on select");
   if (options.style.display == "block") {
     options.style.display = "none";
   } else {
@@ -14,25 +15,26 @@ selectTag.addEventListener("click", function () {
   }
 });
 
-console.log(optionsList);
+// add event listener for every option tag 
 var selectIndex;
-
 for (var i = 0; i < optionsList.length; i++) {
   console.log(optionsList[i].innerHTML);
   console.log(i);
   optionsList[i].addEventListener("click", function (e) {
-      
+    
+    // store the index of the clicked option
     selectIndex = this.getAttribute("data-value");
 
-    
+    // change the text inside the select div 
     selectTag.innerHTML = this.innerHTML;
+    console.log("click on option " + this.innerHTML);
+    // selected item has "is select" class
     this.classList.add("custom-options--is-selected");
-    console.log("kliknuto na " + this.innerHTML + " a i je " + i);
-
+    options.style.display = "none";
+    // search what option has "is-selected" class and delete it
     var j;
     for (j = 0; j < optionsList.length; j++) {
         if(optionsList[j].classList.contains("custom-options--is-selected") && j != selectIndex){
-            console.log("jecko je " + j + "a icko je " + i);
             optionsList[j].classList.remove("custom-options--is-selected");
         }
     }
