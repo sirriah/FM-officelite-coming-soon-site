@@ -1,6 +1,7 @@
 const selectTag = document.querySelector(".custom-select");
 const selectAfterTag = document.querySelector(".custom-select::after");
 const options = document.getElementById("custom-options");
+const arrow = document.querySelector(".custom-select__arrow");
 //const optionsList = document.querySelectorAll(".custom-options div");
 const optionsList = document.getElementById("custom-options").children;
 //const singleOption = document.querySelector(".custom-options--is-selected");
@@ -10,8 +11,10 @@ selectTag.addEventListener("click", function () {
   console.log("click on select");
   if (options.style.display == "block") {
     options.style.display = "none";
+    arrow.classList.remove("rotation");
   } else {
     options.style.display = "block";
+    arrow.classList.add("rotation");
   }
 });
 

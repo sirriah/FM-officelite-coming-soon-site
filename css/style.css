@@ -135,12 +135,29 @@ input[type=text].error::after {
   font-weight: 700;
   position: relative;
   cursor: pointer;
+  /*
+  &::after {
+    content: url("./../assets/sign-up/icon-arrow-down.svg");
+    position: absolute;
+    right: 1rem;
+
+    .rotation{
+      transform: rotate(180deg);
+    }
+  }
+  */
 }
 
-.custom-select::after {
+.custom-select .custom-select__arrow {
   content: url("./../assets/sign-up/icon-arrow-down.svg");
   position: absolute;
   right: 1rem;
+  top: calc(50% - 0.25rem);
+}
+
+.rotation {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .custom-options {
