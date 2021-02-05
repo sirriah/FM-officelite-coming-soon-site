@@ -61,6 +61,7 @@ input[type=text]{
     font-size: 1rem;
     padding: 1rem;
     background-color: transparent;
+    position: relative;
 
     &.error{
         border-bottom: 1px solid $error;

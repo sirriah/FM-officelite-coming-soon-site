@@ -10,25 +10,13 @@
   font-weight: 700;
   position: relative;
   cursor: pointer;
-
-  // arrow of the select tag
-  /*
-  &::after {
-    content: url("./../assets/sign-up/icon-arrow-down.svg");
-    position: absolute;
-    right: 1rem;
-
-    .rotation{
-      transform: rotate(180deg);
-    }
-  }
-  */
-
+  
   .custom-select__arrow{
     content: url("./../assets/sign-up/icon-arrow-down.svg");
     position: absolute;
     right: 1rem;
     top: calc(50% - 0.25rem);
+    transition: transform 300ms ease-in-out;
   }
 }
 
@@ -48,6 +36,7 @@
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
   position: absolute;
   display: none;
+  //visibility: hidden;
 
   > div {
     width: 22.5rem;

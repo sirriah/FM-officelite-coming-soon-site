@@ -59,6 +59,7 @@ input[type=text] {
   font-size: 1rem;
   padding: 1rem;
   background-color: transparent;
+  position: relative;
 }
 
 input[type=text].error {
@@ -125,6 +126,60 @@ input[type=text].error::after {
   color: #829CFF;
 }
 
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
+}
+
 /* This is custom design of the select tag */
 .custom-select {
   background-color: transparent;
@@ -135,17 +190,6 @@ input[type=text].error::after {
   font-weight: 700;
   position: relative;
   cursor: pointer;
-  /*
-  &::after {
-    content: url("./../assets/sign-up/icon-arrow-down.svg");
-    position: absolute;
-    right: 1rem;
-
-    .rotation{
-      transform: rotate(180deg);
-    }
-  }
-  */
 }
 
 .custom-select .custom-select__arrow {
@@ -153,6 +197,10 @@ input[type=text].error::after {
   position: absolute;
   right: 1rem;
   top: calc(50% - 0.25rem);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 .rotation {
