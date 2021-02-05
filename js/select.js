@@ -1,4 +1,5 @@
 const selectTag = document.querySelector(".custom-select");
+const selectTagText = document.querySelector(".custom-select__text");
 const selectAfterTag = document.querySelector(".custom-select::after");
 const options = document.getElementById("custom-options");
 const arrow = document.querySelector(".custom-select__arrow");
@@ -9,11 +10,16 @@ const optionsList = document.getElementById("custom-options").children;
 // display the options menu
 selectTag.addEventListener("click", function () {
   console.log("click on select");
-  if (options.style.display == "block") {
-    options.style.display = "none";
+  //if (options.style.display == "block") {
+    if (arrow.classList.contains('rotation')) {
+    //options.style.display = "none";
+    options.classList.remove('fade-in');
+    options.classList.add('fade-out');
     arrow.classList.remove("rotation");
   } else {
-    options.style.display = "block";
+   // options.style.display = "block";
+   options.classList.remove('fade-out');
+    options.classList.add('fade-in');
     arrow.classList.add("rotation");
   }
 });
@@ -29,11 +35,13 @@ for (var i = 0; i < optionsList.length; i++) {
     selectIndex = this.getAttribute("data-value");
 
     // change the text inside the select div 
-    selectTag.innerHTML = this.innerHTML;
+    selectTagText.innerHTML = this.innerHTML;
     console.log("click on option " + this.innerHTML);
     // selected item has "is select" class
     this.classList.add("custom-options--is-selected");
-    options.style.display = "none";
+    options.classList.remove('fade-in');
+    options.classList.add('fade-out');
+    arrow.classList.remove("rotation");
     // search what option has "is-selected" class and delete it
     var j;
     for (j = 0; j < optionsList.length; j++) {

@@ -220,7 +220,8 @@ input[type=text].error::after {
   -webkit-box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
           box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
   position: absolute;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .custom-options > div {
