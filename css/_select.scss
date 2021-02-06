@@ -5,7 +5,7 @@
   background-color: transparent;
   border-bottom: 1px solid $grayMiddle;
   padding: 1rem;
-  width: 22.5rem;
+  width: 100%;
   color: $grayMiddle;
   font-weight: 700;
   position: relative;
@@ -29,22 +29,22 @@
   background-color: white;
   border-radius: 8px;
   border: 1px solid rgba(51, 57, 80, 0.153273);
-  width: 22.5rem;
+  width: 100%;
   padding: 0.3rem 2rem;
   margin-top: 1.5rem;
-  box-sizing: content-box;
+  box-sizing: border-box;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
   position: absolute;
-  //display: none;
   visibility: hidden;
   opacity: 0;
 
   > div {
-    width: 22.5rem;
+    width: 100%;
     padding: 1rem;
     color: $grayMiddle;
     font-weight: 700;
     position: relative;
+    
 
     &:not(:last-child) {
       border-bottom: 1px solid $grayOpacity;

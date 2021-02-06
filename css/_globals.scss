@@ -1,16 +1,13 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 body{
     margin: 0;
+    padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
     color: $grayLighter;
     font-weight: 300;
     line-height: 1.75;
     background-color: #FAFAFA;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -36,6 +33,27 @@ h3 {
 a {
     text-decoration: none;
     font-weight: 400;
+    cursor: pointer;
+}
+
+main{
+    position: relative;
+    z-index: 5;
+}
+
+.container{
+    margin: 0 1.5rem 0 1.5rem;
+    box-sizing: border-box;
+
+    @include breakpoint-up(medium){
+        margin: 0 2.5rem 0 2.5rem;
+    }
+
+    @include breakpoint-up(large){
+        max-width: 69.375rem;
+       margin: 0 auto;
+    }
+    
 }
 
 .font--bigger{
@@ -62,17 +80,17 @@ input[type=text]{
     padding: 1rem;
     background-color: transparent;
     position: relative;
+    display: block;
+    width: 100%;
 
     &.error{
         border-bottom: 1px solid $error;
         color: $error;
         position: relative;
+        background-image: url("./../assets/sign-up/icon-cross.svg");
+        background-repeat: no-repeat;
+        background-position: center right;
 
-        &::after{
-            content: url("./../assets/sign-up/icon-cross.svg");
-            position: absolute;
-            right: 1rem;
-        }
     }
     
 }
@@ -107,10 +125,10 @@ input[type=text]{
 
 .button--light-blue{
     color: $primary1;
-    background-color: $primaryLighter;
+    background-color: $primary4;
 
     &:hover {
-        background-color: $primaryLight;
+        background-color: $primary3;
     }
 }
 
@@ -124,3 +142,11 @@ input[type=text]{
     }
 }
 
+.flex{
+    display: flex;
+
+    &--jc-c{
+        justify-content: center;
+        
+    }
+}

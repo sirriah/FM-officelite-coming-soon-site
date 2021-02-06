@@ -1,17 +1,13 @@
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
   color: #747B95;
   font-weight: 300;
   line-height: 1.75;
   background-color: #FAFAFA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1 {
@@ -37,6 +33,31 @@ h3 {
 a {
   text-decoration: none;
   font-weight: 400;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  z-index: 5;
+}
+
+.container {
+  margin: 0 1.5rem 0 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 40em) {
+  .container {
+    margin: 0 2.5rem 0 2.5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+  }
 }
 
 .font--bigger {
@@ -60,18 +81,17 @@ input[type=text] {
   padding: 1rem;
   background-color: transparent;
   position: relative;
+  display: block;
+  width: 100%;
 }
 
 input[type=text].error {
   border-bottom: 1px solid #F05B5B;
   color: #F05B5B;
   position: relative;
-}
-
-input[type=text].error::after {
-  content: url("./../assets/sign-up/icon-cross.svg");
-  position: absolute;
-  right: 1rem;
+  background-image: url("./../assets/sign-up/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
 ::-webkit-input-placeholder {
@@ -109,11 +129,11 @@ input[type=text].error::after {
 
 .button--light-blue {
   color: #5175FF;
-  background-color: rgba(81, 117, 255, 0.15);
+  background-color: #e1e6fb;
 }
 
 .button--light-blue:hover {
-  background-color: rgba(81, 117, 255, 0.25);
+  background-color: #cfd8fb;
 }
 
 .button--white {
@@ -124,6 +144,18 @@ input[type=text].error::after {
 
 .button--white:hover {
   color: #829CFF;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex--jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes fade-in {
@@ -185,7 +217,7 @@ input[type=text].error::after {
   background-color: transparent;
   border-bottom: 1px solid #333950;
   padding: 1rem;
-  width: 22.5rem;
+  width: 100%;
   color: #333950;
   font-weight: 700;
   position: relative;
@@ -212,11 +244,11 @@ input[type=text].error::after {
   background-color: white;
   border-radius: 8px;
   border: 1px solid rgba(51, 57, 80, 0.153273);
-  width: 22.5rem;
+  width: 100%;
   padding: 0.3rem 2rem;
   margin-top: 1.5rem;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
           box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
   position: absolute;
@@ -225,7 +257,7 @@ input[type=text].error::after {
 }
 
 .custom-options > div {
-  width: 22.5rem;
+  width: 100%;
   padding: 1rem;
   color: #333950;
   font-weight: 700;
@@ -338,4 +370,47 @@ select:focus + .focus {
 // https://www.w3schools.com/howto/howto_custom_select.asp
 
 */
+.header {
+  padding: 2.875rem 0 5rem 0;
+  z-index: 5;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 40em) {
+  .header {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+.header__link {
+  position: relative;
+  z-index: 5;
+}
+
+.header__logo {
+  width: 9.6875rem;
+}
+
+.header::after {
+  content: "";
+  background-image: url("./../assets/home/bg-pattern-header.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -100%;
+  width: 28.625rem;
+  height: 28.625rem;
+  position: absolute;
+  z-index: 1;
+}
 /*# sourceMappingURL=style.css.map */

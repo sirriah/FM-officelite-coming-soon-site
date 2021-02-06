@@ -1,0 +1,37 @@
+.header{
+    //width: 100%;
+    padding: 2.875rem 0 5rem 0; 
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    box-sizing: border-box;
+
+    @include breakpoint-up(medium){
+        justify-content: left;
+    }
+
+    &__link{
+        position: relative;
+        z-index: 5;
+    }
+
+    &__logo{
+        width: 9.6875rem;
+    }
+
+    &::after{
+        content: "";
+        background-image: url("./../assets/home/bg-pattern-header.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -100%;
+        width: 28.625rem;
+        height: 28.625rem;
+        position: absolute;
+        z-index: 1;
+    }
+    
+}
+
