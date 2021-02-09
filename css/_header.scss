@@ -5,11 +5,21 @@
     position: relative;
     display: flex;
     justify-content: center;
-    background-color: red;
+    /*
+    background-image: url("./../assets/home/bg-pattern-header.svg");
+    background-size: 28.625rem 28.625rem;
+    background-repeat: no-repeat;
+    */
     box-sizing: border-box;
+    
 
     @include breakpoint-up(medium){
         justify-content: left;
+        padding: 4.5rem 0 6.5rem 0;
+    }
+
+    @include breakpoint-up(large){
+        padding: 5.0625rem 0 6.375rem 0;
     }
 
     &__link{
@@ -21,6 +31,7 @@
         width: 9.6875rem;
     }
 
+    
     &::after{
         content: "";
         background-image: url("./../assets/home/bg-pattern-header.svg");
@@ -31,7 +42,27 @@
         height: 28.625rem;
         position: absolute;
         z-index: 1;
+        //filter: brightness(80%);
+        
+        
+
+        @include breakpoint-up(medium) {
+            width: 41.625rem;
+            height: 41.625rem;
+            //right: -50%;
+            right: -20rem;
+            top: -75%;
+        }
+
+        @include breakpoint-up(large) {
+            width: 70.875rem;
+            height: 70.875rem;
+            right: -45%;
+            top: -190%;
+        }
+
     }
+    
     
 }
 

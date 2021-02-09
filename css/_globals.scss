@@ -1,152 +1,174 @@
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
-    color: $grayLighter;
-    font-weight: 300;
-    line-height: 1.75;
-    background-color: #FAFAFA;
+*{
     box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  color: $grayLighter;
+  font-weight: 300;
+  line-height: 1.75;
+  background-color: #fafafa;
+  box-sizing: border-box;
 }
 
 h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: $grayMiddle;
+
+  @include breakpoint-up(large) {
     font-size: 3.5rem;
     line-height: 4rem;
-    color: $grayMiddle;
+  }
 }
 
 h2 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    color: $grayMiddle;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: $grayMiddle;
 }
 
 h3 {
-    font-size: 1rem;
-    line-height: 3rem;
-    color: $grayMiddle;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+  font-size: 1rem;
+  line-height: 3rem;
+  color: $grayMiddle;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 a {
-    text-decoration: none;
-    font-weight: 400;
-    cursor: pointer;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
 }
 
-main{
-    position: relative;
-    z-index: 5;
+main {
+  position: relative;
+  z-index: 5;
 }
 
-.container{
-    margin: 0 1.5rem 0 1.5rem;
-    box-sizing: border-box;
-
-    @include breakpoint-up(medium){
-        margin: 0 2.5rem 0 2.5rem;
-    }
-
-    @include breakpoint-up(large){
-        max-width: 69.375rem;
-       margin: 0 auto;
-    }
-    
+.content {
+  overflow-x: hidden;
+  width: 100vw;
 }
 
-.font--bigger{
+.container {
+  margin: 0 1.5rem 0 1.5rem;
+  box-sizing: border-box;
+
+  @include breakpoint-up(medium) {
+    margin: 0 2.5rem 0 2.5rem;
+  }
+
+  @include breakpoint-up(large) {
+    max-width: 69.375rem;
+    margin: 0 auto;
+  }
+}
+
+p {
+  padding-bottom: 1.5rem;
+}
+
+.font--bigger {
+  font-size: 1rem;
+
+  @include breakpoint-up(medium) {
     font-size: 1.125rem;
+  }
 }
 
 // for screen readers only
-.sr-text{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border: none;
-    color: transparent;
-    overflow: hidden;
+.sr-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: none;
+  color: transparent;
+  overflow: hidden;
 }
-
 
 // form fields input
-input[type=text]{
-    border: none;
-    border-bottom: 1px solid $grayLighter;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 1rem;
-    padding: 1rem;
-    background-color: transparent;
+input[type="text"] {
+  border: none;
+  border-bottom: 1px solid $grayLighter;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: transparent;
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &.error {
+    border-bottom: 1px solid $error;
+    color: $error;
     position: relative;
-    display: block;
-    width: 100%;
-
-    &.error{
-        border-bottom: 1px solid $error;
-        color: $error;
-        position: relative;
-        background-image: url("./../assets/sign-up/icon-cross.svg");
-        background-repeat: no-repeat;
-        background-position: center right;
-
-    }
-    
+    background-image: url("./../assets/sign-up/icon-cross.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
 }
 
-::-webkit-input-placeholder { /* Edge */
-    color: $grayOpacity;
+::-webkit-input-placeholder {
+  /* Edge */
+  color: $grayOpacity;
 }
-  
-:-ms-input-placeholder { /* Internet Explorer */
-    color: $grayOpacity;
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: $grayOpacity;
 }
-  
+
 ::placeholder {
-    color: $grayOpacity;
+  color: $grayOpacity;
 }
 
+.button {
+  padding: 0.875rem 2.5625rem;
+  font-weight: 600;
+  border-radius: 1.75rem;
+  line-height: 1.75rem;
+  display: inline-block;
 
-.button{
-    padding: 0.875rem 3.4375rem;
-    font-weight: 700;
-    border-radius: 1.75rem;
-}
-
-.button--dark-blue{
+  &--dark-blue {
     color: white;
     background-color: $primary1;
 
-    &:hover{
-        background-color: $primary2;
+    &:hover {
+      background-color: $primary2;
     }
-}
+  }
 
-.button--light-blue{
+  &--light-blue {
     color: $primary1;
     background-color: $primary4;
 
     &:hover {
-        background-color: $primary3;
+      background-color: $primary3;
     }
-}
+  }
 
-.button--white{
-    border: 1px solid black;
+  &--white {
     color: $primary1;
     background-color: white;
 
     &:hover {
-        color: $primary2;
+      color: $primary2;
     }
+  }
+
+  &--shadow {
+    box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159);
+  }
 }
 
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 
-    &--jc-c{
-        justify-content: center;
-        
-    }
+  &--jc-c {
+    justify-content: center;
+  }
 }
