@@ -57,6 +57,7 @@ main {
 .container {
   margin: 0 1.5rem 0 1.5rem;
   box-sizing: border-box;
+  position: relative;
 
   @include breakpoint-up(medium) {
     margin: 0 2.5rem 0 2.5rem;

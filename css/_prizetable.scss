@@ -1,4 +1,31 @@
+.bg-footer{
+    position: relative;
+    background-color: $grayDarker;
+    background-image: url("./../assets/home/bg-pattern-footer.svg");
+    background-repeat: no-repeat;
+    background-size: 75.125rem 75.125rem;
+    background-position: center 10rem;
+    width: 100%;
+   // height: 78rem;
+
+    
+
+    @include breakpoint-up(medium){
+        //height: 61.625rem;
+        background-size: 90.875rem 90.875rem;
+        background-position: center top;
+    }
+
+    @include breakpoint-up(large){
+        //height: 37.6875rem;
+        background-position: -25rem center;
+    }
+}
+
 .prize-table{
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
 
     display: flex;
     flex-direction: column;

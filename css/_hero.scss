@@ -3,18 +3,21 @@
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
-    margin-bottom: 6.25rem;
+   // margin-bottom: 6.25rem;
+   margin-bottom: 55.625rem;
 
     @include breakpoint-up(medium){
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         text-align: left;
-        margin-bottom: 8.75rem;
+        //margin-bottom: 8.75rem;
+        margin-bottom: 40.625rem;
     }
 
     @include breakpoint-up(large){
         align-items: flex-start;
+        margin-bottom: 21.875rem;
     }
 
 
