@@ -56,8 +56,102 @@ main {
 .content {
   overflow-x: hidden;
   width: 100vw;
+  min-height: 100%;
+  height: 100%;
+  /*
+  &--two-color{
+    background: linear-gradient(180deg, #FFFFFF 75%, $grayDarker 25%), url("./../assets/home/bg-pattern-header.svg");
+   // background-position: top left, bottom center;
+
+    @include breakpoint-up(medium){
+      background: linear-gradient(180deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
+    }
+
+    @include breakpoint-up(large){
+      background: linear-gradient(90deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
+    }
+  }
+*/
 }
 
+.content__background {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+}
+
+.content__background .white {
+  width: 100%;
+  height: 75%;
+  background-color: pink;
+}
+
+@media (min-width: 40em) {
+  .content__background .white {
+    width: 70%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 64em) {
+  .content__background .white {
+    width: 70%;
+    height: 100%;
+  }
+}
+
+.content__background .black {
+  width: 100%;
+  height: 25%;
+  background-color: #25293A;
+}
+
+@media (min-width: 40em) {
+  .content__background .black {
+    width: 30%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 64em) {
+  .content__background .black {
+    width: 30%;
+    height: 100%;
+  }
+}
+
+/*
+.bottom-back{
+ 
+  position: absolute;
+   
+  left: 0;
+
+ 
+bottom:0;
+  
+  background-color: $grayDarker;
+  width: 100%;
+  height: 20rem;
+  background-image: url("./../assets/sign-up/bg-pattern-side.svg");
+  background-position: center center;
+  background-size: 75.125rem 75.125rem;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  @include breakpoint-up(medium){
+    height: 23.75rem;
+    background-size: 90.875rem 90.875rem;
+
+  }
+
+}
+*/
 .container {
   margin: 0 1.5rem 0 1.5rem;
   -webkit-box-sizing: border-box;
@@ -392,6 +486,12 @@ input[type="text"].error {
 }
 
 .header__signup::after {
+  /*position: absolute;
+            top:unset;
+            bottom:0;
+            background-color: $grayDarker;
+            width: 100%;
+            height: 20rem;*/
   background-image: none;
 }
 

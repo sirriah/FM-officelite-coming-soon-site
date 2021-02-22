@@ -1,5 +1,5 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -52,7 +52,93 @@ main {
 .content {
   overflow-x: hidden;
   width: 100vw;
+  min-height: 100%;
+  height: 100%;
+
+  /*
+  &--two-color{
+    background: linear-gradient(180deg, #FFFFFF 75%, $grayDarker 25%), url("./../assets/home/bg-pattern-header.svg");
+   // background-position: top left, bottom center;
+
+    @include breakpoint-up(medium){
+      background: linear-gradient(180deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
+    }
+
+    @include breakpoint-up(large){
+      background: linear-gradient(90deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
+    }
+  }
+*/
+
+  &__background {
+    flex-direction: column;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+
+    .white {
+      width: 100%;
+      height: 75%;
+      background-color: pink;
+      //display: block;
+
+      @include breakpoint-up(medium) {
+        width: 70%;
+        height: 100%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 70%;
+        height: 100%;
+      }
+    }
+
+    .black {
+      width: 100%;
+      height: 25%;
+      background-color: $grayDarker;
+      //display: block;
+
+      @include breakpoint-up(medium) {
+        width: 30%;
+        height: 100%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 30%;
+        height: 100%;
+      }
+    }
+  }
 }
+/*
+.bottom-back{
+ 
+  position: absolute;
+   
+  left: 0;
+
+ 
+bottom:0;
+  
+  background-color: $grayDarker;
+  width: 100%;
+  height: 20rem;
+  background-image: url("./../assets/sign-up/bg-pattern-side.svg");
+  background-position: center center;
+  background-size: 75.125rem 75.125rem;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  @include breakpoint-up(medium){
+    height: 23.75rem;
+    background-size: 90.875rem 90.875rem;
+
+  }
+
+}
+*/
 
 .container {
   margin: 0 1.5rem 0 1.5rem;
