@@ -2,7 +2,12 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
@@ -49,96 +54,51 @@ main {
   z-index: 5;
 }
 
+p {
+  padding-bottom: 1.5rem;
+}
+
 .content {
   overflow-x: hidden;
-  width: 100vw;
-  min-height: 100%;
-  height: 100%;
+  width: 100vw;  
+}
 
-  /*
-  &--two-color{
-    background: linear-gradient(180deg, #FFFFFF 75%, $grayDarker 25%), url("./../assets/home/bg-pattern-header.svg");
-   // background-position: top left, bottom center;
+/*background for signup page, which is split into white and darkgray */
+.background{
+  position: relative;
+  min-height: 100%;
+
+  &::after{
+    content: "";
+    height: 20rem;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $grayDarker;
+    background-image: url("./../assets/sign-up/bg-pattern-side.svg");
+    background-size: 75.125rem 75.125rem;
+    background-position: center center;
+    z-index: -1;
 
     @include breakpoint-up(medium){
-      background: linear-gradient(180deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
+      height: 23.75rem;
+    width: 100%;
+    background-size: 90.875rem 90.875rem;
     }
 
     @include breakpoint-up(large){
-      background: linear-gradient(90deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
-    }
-  }
-*/
-
-  &__background {
-    flex-direction: column;
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100%;
-
-    .white {
-      width: 100%;
-      height: 75%;
-      background-color: pink;
-      //display: block;
-
-      @include breakpoint-up(medium) {
-        width: 70%;
-        height: 100%;
-      }
-
-      @include breakpoint-up(large) {
-        width: 70%;
-        height: 100%;
-      }
+      height: 100%;
+      width: 30%;
+      top: 0;
+      bottom: unset;
+      right: 0;
+      background-size: 127.25rem 127.255rem;
+      background-position: center center;
     }
 
-    .black {
-      width: 100%;
-      height: 25%;
-      background-color: $grayDarker;
-      //display: block;
-
-      @include breakpoint-up(medium) {
-        width: 30%;
-        height: 100%;
-      }
-
-      @include breakpoint-up(large) {
-        width: 30%;
-        height: 100%;
-      }
-    }
   }
 }
-/*
-.bottom-back{
- 
-  position: absolute;
-   
-  left: 0;
-
- 
-bottom:0;
-  
-  background-color: $grayDarker;
-  width: 100%;
-  height: 20rem;
-  background-image: url("./../assets/sign-up/bg-pattern-side.svg");
-  background-position: center center;
-  background-size: 75.125rem 75.125rem;
-  background-repeat: no-repeat;
-  z-index: -1;
-
-  @include breakpoint-up(medium){
-    height: 23.75rem;
-    background-size: 90.875rem 90.875rem;
-
-  }
-
-}
-*/
 
 .container {
   margin: 0 1.5rem 0 1.5rem;
@@ -155,9 +115,6 @@ bottom:0;
   }
 }
 
-p {
-  padding-bottom: 1.5rem;
-}
 
 .font--bigger {
   font-size: 1rem;

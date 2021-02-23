@@ -3,7 +3,12 @@
           box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
@@ -53,105 +58,55 @@ main {
   z-index: 5;
 }
 
+p {
+  padding-bottom: 1.5rem;
+}
+
 .content {
   overflow-x: hidden;
   width: 100vw;
+}
+
+/*background for signup page, which is split into white and darkgray */
+.background {
+  position: relative;
   min-height: 100%;
-  height: 100%;
-  /*
-  &--two-color{
-    background: linear-gradient(180deg, #FFFFFF 75%, $grayDarker 25%), url("./../assets/home/bg-pattern-header.svg");
-   // background-position: top left, bottom center;
-
-    @include breakpoint-up(medium){
-      background: linear-gradient(180deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
-    }
-
-    @include breakpoint-up(large){
-      background: linear-gradient(90deg, #FFFFFF 71%, $grayDarker 29%), url("./../assets/home/bg-pattern-header.svg");
-    }
-  }
-*/
 }
 
-.content__background {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100%;
-}
-
-.content__background .white {
-  width: 100%;
-  height: 75%;
-  background-color: pink;
-}
-
-@media (min-width: 40em) {
-  .content__background .white {
-    width: 70%;
-    height: 100%;
-  }
-}
-
-@media (min-width: 64em) {
-  .content__background .white {
-    width: 70%;
-    height: 100%;
-  }
-}
-
-.content__background .black {
-  width: 100%;
-  height: 25%;
-  background-color: #25293A;
-}
-
-@media (min-width: 40em) {
-  .content__background .black {
-    width: 30%;
-    height: 100%;
-  }
-}
-
-@media (min-width: 64em) {
-  .content__background .black {
-    width: 30%;
-    height: 100%;
-  }
-}
-
-/*
-.bottom-back{
- 
-  position: absolute;
-   
-  left: 0;
-
- 
-bottom:0;
-  
-  background-color: $grayDarker;
-  width: 100%;
+.background::after {
+  content: "";
   height: 20rem;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #25293A;
   background-image: url("./../assets/sign-up/bg-pattern-side.svg");
-  background-position: center center;
   background-size: 75.125rem 75.125rem;
-  background-repeat: no-repeat;
+  background-position: center center;
   z-index: -1;
-
-  @include breakpoint-up(medium){
-    height: 23.75rem;
-    background-size: 90.875rem 90.875rem;
-
-  }
-
 }
-*/
+
+@media (min-width: 40em) {
+  .background::after {
+    height: 23.75rem;
+    width: 100%;
+    background-size: 90.875rem 90.875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .background::after {
+    height: 100%;
+    width: 30%;
+    top: 0;
+    bottom: unset;
+    right: 0;
+    background-size: 127.25rem 127.255rem;
+    background-position: center center;
+  }
+}
+
 .container {
   margin: 0 1.5rem 0 1.5rem;
   -webkit-box-sizing: border-box;
@@ -170,10 +125,6 @@ bottom:0;
     max-width: 69.375rem;
     margin: 0 auto;
   }
-}
-
-p {
-  padding-bottom: 1.5rem;
 }
 
 .font--bigger {
@@ -422,11 +373,6 @@ input[type="text"].error {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /*
-    background-image: url("./../assets/home/bg-pattern-header.svg");
-    background-size: 28.625rem 28.625rem;
-    background-repeat: no-repeat;
-    */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -485,14 +431,10 @@ input[type="text"].error {
   }
 }
 
-.header__signup::after {
-  /*position: absolute;
-            top:unset;
-            bottom:0;
-            background-color: $grayDarker;
-            width: 100%;
-            height: 20rem;*/
-  background-image: none;
+@media (min-width: 40em) {
+  .header__background::after {
+    background-image: none;
+  }
 }
 
 .hero {

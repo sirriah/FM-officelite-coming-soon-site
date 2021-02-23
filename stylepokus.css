@@ -3,8 +3,8 @@ html, body{
 }
 
 .wrapper{
-   position: relative;
-   height: 100%;
+   position: absolute;
+   min-height: 100%;
 }
 
 .wrapper::after{

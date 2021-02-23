@@ -1,15 +1,9 @@
 .header{
-    //width: 100%;
     padding: 2.875rem 0 5rem 0; 
     z-index: 5;
     position: relative;
     display: flex;
     justify-content: center;
-    /*
-    background-image: url("./../assets/home/bg-pattern-header.svg");
-    background-size: 28.625rem 28.625rem;
-    background-repeat: no-repeat;
-    */
     box-sizing: border-box;
     
 
@@ -42,14 +36,13 @@
         height: 28.625rem;
         position: absolute;
         z-index: 1;
-        //filter: brightness(80%);
+
         
         
 
         @include breakpoint-up(medium) {
             width: 41.625rem;
             height: 41.625rem;
-            //right: -50%;
             right: -20rem;
             top: -75%;
         }
@@ -64,17 +57,12 @@
     }
     
     
-    &__signup{
-
+    &__background{
+        @include breakpoint-up(medium) {
         &::after{
-            /*position: absolute;
-            top:unset;
-            bottom:0;
-            background-color: $grayDarker;
-            width: 100%;
-            height: 20rem;*/
             background-image: none;
         }
+    }
     }
 
     

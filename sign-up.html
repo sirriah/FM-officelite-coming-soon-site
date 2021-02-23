@@ -17,12 +17,12 @@
 </head>
 <body>
 
-  <div class="content content--two-color bottom-back">
-    <div class="content__background flex">
-      <span class="white"></span>
-      <span class="black"></span>
-    </div>
-    <div class="container header header__signup">
+
+<div class="background">
+
+
+  <div class="content">
+    <div class="container header header__background">
       <a href="#" class="header__link">
         <span class="sr-text">Homepage</span>
         <img
@@ -31,14 +31,64 @@
           class="header__logo"
         />
       </a>
-
-      
     </div>
+    <main class="container">
+      <div class="hero">
+        <div class="hero__text">
+          <h1 class="hero__headline">
+            Work smarter. Save time.
+          </h1>
+          <p class="hero__paragraph font--bigger">
+            Easily manage your projects. Get on the list and receive in-app perks available only to 
+            early subscribers. We are moving into final development and getting ready for official launch soon.
+          </p>
+         
+ <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+ <h3>Coming <span class="footer__date" id="datum">4 Nov 2020</span></h3>
+    
+ <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+ <div class="timer">
+   <div class="timer__clocks">
+     <div class="timer__card">
+       <span class="timer__number days">00</span>
+       <span class="timer__units">Days</span>
+     </div>
+     <div class="timer__card">
+       <span class="timer__number hours">00</span>
+       <span class="timer__units">Hours</span>
+     </div>
+     <div class="timer__card">
+       <span class="timer__number minutes">00</span>
+       <span class="timer__units">Min</span>
+     </div>
+     <div class="timer__card">
+       <span class="timer__number seconds">00</span>
+       <span class="timer__units">Sec</span>
+     </div>
+   </div>
 
-    Work smarter. Save time.
+   <div class="timer__button">
+<a href="#" class="button button--dark-blue">Try for Free</a>
+   </div>
+   
+ </div>
+ 
 
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
+
+
+        </div>
+        <div class="hero__image">
+          <img
+            src="./assets/home/illustration-charts.svg"
+            alt="charts illustration"
+          />
+        </div>
+      </div>
+    </main>
+
+    
+
+
 
   <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
   Coming 4 Nov 2020 
@@ -70,6 +120,11 @@
   </div>
 
 
+
+
+</div>
+
+  
   
 </body>
 </html>
