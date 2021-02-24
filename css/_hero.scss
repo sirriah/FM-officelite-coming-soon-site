@@ -55,4 +55,26 @@
         }
     }
        
+
+    /*signup page*/
+    &__signup{
+        flex-direction: column;
+        margin-bottom: 5.5rem;
+        
+    @include breakpoint-up(medium){
+        text-align: center;
+
+    }
+
+    @include breakpoint-up(large){
+        text-align: left;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    }
+
+
+
+    
 }

@@ -1,130 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Frontend Mentor | Officelite coming soon site</title>
-</head>
-<body>
-
-
-<div class="background">
-
-
-  <div class="content">
-    <div class="container header header__background">
-      <a href="#" class="header__link">
-        <span class="sr-text">Homepage</span>
-        <img
-          src="./assets/shared/logo.svg"
-          alt="Officelite logo"
-          class="header__logo"
-        />
-      </a>
-    </div>
-    <main class="container">
-      <div class="hero">
-        <div class="hero__text">
-          <h1 class="hero__headline">
-            Work smarter. Save time.
-          </h1>
-          <p class="hero__paragraph font--bigger">
-            Easily manage your projects. Get on the list and receive in-app perks available only to 
-            early subscribers. We are moving into final development and getting ready for official launch soon.
-          </p>
-         
- <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
- <h3>Coming <span class="footer__date" id="datum">4 Nov 2020</span></h3>
-    
- <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
- <div class="timer">
-   <div class="timer__clocks">
-     <div class="timer__card">
-       <span class="timer__number days">00</span>
-       <span class="timer__units">Days</span>
-     </div>
-     <div class="timer__card">
-       <span class="timer__number hours">00</span>
-       <span class="timer__units">Hours</span>
-     </div>
-     <div class="timer__card">
-       <span class="timer__number minutes">00</span>
-       <span class="timer__units">Min</span>
-     </div>
-     <div class="timer__card">
-       <span class="timer__number seconds">00</span>
-       <span class="timer__units">Sec</span>
-     </div>
-   </div>
-
-   <div class="timer__button">
-<a href="#" class="button button--dark-blue">Try for Free</a>
-   </div>
-   
- </div>
- 
-
-
-
+  </head>
+  <body>
+    <div class="background">
+      <div class="content">
+        <div class="container header header__background">
+          <a href="#" class="header__link">
+            <span class="sr-text">Homepage</span>
+            <img
+              src="./assets/shared/logo.svg"
+              alt="Officelite logo"
+              class="header__logo"
+            />
+          </a>
         </div>
-        <div class="hero__image">
-          <img
-            src="./assets/home/illustration-charts.svg"
-            alt="charts illustration"
-          />
-        </div>
+        <main class="container">
+          <div class="hero hero__signup">
+            <div class="hero__text">
+              <h1 class="hero__headline">Work smarter. Save time.</h1>
+              <p class="hero__paragraph font--bigger">
+                Easily manage your projects. Get on the list and receive in-app
+                perks available only to early subscribers. We are moving into
+                final development and getting ready for official launch soon.
+              </p>
+
+              <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+              <h3>
+                Coming <span class="footer__date" id="datum">4 Nov 2020</span>
+              </h3>
+
+              <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+              <div class="timer timer--light">
+                <div class="timer__clocks">
+                  <div class="timer__card">
+                    <span class="timer__number days">00</span>
+                    <span class="timer__units">Days</span>
+                  </div>
+                  <div class="timer__card">
+                    <span class="timer__number hours">00</span>
+                    <span class="timer__units">Hours</span>
+                  </div>
+                  <div class="timer__card">
+                    <span class="timer__number minutes">00</span>
+                    <span class="timer__units">Min</span>
+                  </div>
+                  <div class="timer__card">
+                    <span class="timer__number seconds">00</span>
+                    <span class="timer__units">Sec</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__container">
+              <form action="">
+                <div class="component-wrap like-placeholder">
+                  <label  for="name">Name</label>
+                  <input type="text" name="name" id="name" >
+                </div>
+                
+                <div class="component-wrap like-placeholder">
+                <label  for="email">Email Address</label>
+                <input type="email" name="email" id="email">
+              </div>
+                
+                <div class="custom-select">
+                  <span class="custom-select__text"> Basic Pack Free </span>
+                  <span class="custom-select__arrow"></span>
+                </div>
+                <div class="custom-options" id="custom-options">
+                  <div data-value="0" class="custom-options--is-selected">Basic Pack Free</div>
+                  <div data-value="1">Pro Pack $9.99</div>
+                  <div data-value="2">Ultimate Pack $19.99</div>
+                </div>
+
+                <div class="component-wrap like-placeholder">
+                <label class="label--like-placeholder" for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone">
+              </div>
+
+              <div class="component-wrap like-placeholder">
+                <label class="label--like-placeholder" for="company">Company</label>
+                <input type="text" name="company" id="company">
+              </div>
+                <input class="button button--dark-blue button--full" type="button" value="Get on the List" aria-label="Get on the list">
+
+              </form>
+            </div>
+          </div>
+        </main>
+
       </div>
-    </main>
+    </div>
 
-    
-
-
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020 
-
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
-
-<div class="lipsum">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae urna nulla. Sed eget interdum nisi. Phasellus sit amet lorem sed metus finibus scelerisque. Pellentesque odio ipsum, pretium vitae congue blandit, ultrices eu felis. Nunc massa diam, luctus ac libero nec, elementum facilisis lorem. Donec luctus at quam non posuere. Cras ullamcorper id est ut bibendum. Etiam egestas sodales mi vitae vehicula. Aliquam aliquam, nisi quis finibus ultrices, libero dui lobortis neque, a consequat turpis neque nec massa. In nec lectus vel risus porttitor ultrices. Mauris ullamcorper turpis vel enim efficitur, nec egestas turpis semper. Sed at arcu sed ex tempus pharetra vitae ut erat. Suspendisse dignissim est a dolor auctor, nec maximus purus lacinia. Curabitur nec mollis nulla, eget accumsan turpis. Aliquam in bibendum tellus.
-
-  Maecenas ac tincidunt nisi. Proin volutpat in eros euismod lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ullamcorper quam metus, non ultrices est pharetra nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim quis dolor id interdum. Morbi vitae justo convallis, mattis nunc et, lobortis tellus.
-  
-  Sed cursus, enim ac suscipit scelerisque, tellus diam molestie massa, eget accumsan arcu neque sed augue. Aenean vel hendrerit mi, vel pellentesque massa. Morbi fermentum, ex sit amet pulvinar euismod, ipsum odio dapibus ipsum, accumsan interdum diam est a felis. Cras pulvinar purus eros, ac ultrices ante posuere commodo. Proin quis orci ac eros ultricies porttitor. Suspendisse tincidunt aliquet augue accumsan eleifend. Sed augue urna, scelerisque non enim in, euismod posuere lectus. Fusce quis libero quis odio scelerisque laoreet. Integer luctus, dolor laoreet bibendum scelerisque, arcu lorem varius arcu, quis consectetur ligula sem in ligula. 
-</div>
-
-  </div>
-
-
-
-
-</div>
-
-  
-  
-</body>
+    <script src="js/timer.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/labelAnimation.js"></script>
+  </body>
 </html>

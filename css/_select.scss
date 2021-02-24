@@ -5,6 +5,7 @@
   background-color: transparent;
   border-bottom: 1px solid $grayMiddle;
   padding: 1rem;
+  margin-bottom: 0.5rem;
   width: 100%;
   color: $grayMiddle;
   font-weight: 700;
@@ -30,14 +31,15 @@
   background-color: white;
   border-radius: 8px;
   border: 1px solid rgba(51, 57, 80, 0.153273);
-  width: 100%;
+  width: 90%;
   padding: 0.3rem 2rem;
-  margin-top: 1.5rem;
+  margin-top: 0rem;
   box-sizing: border-box;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747077);
   position: absolute;
   visibility: hidden;
   opacity: 0;
+  z-index: 10;
 
   > div {
     width: 100%;

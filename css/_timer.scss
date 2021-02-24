@@ -1,0 +1,78 @@
+.timer{
+    margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     text-align: center;
+
+     @include breakpoint-up(medium){
+         width: 28rem;
+     }
+
+     @include breakpoint-up(large){
+         width: 100%;
+         flex-direction: row;
+         justify-content: space-between;
+         
+     }
+
+     &__clocks{
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 2.5rem;
+
+         @include breakpoint-up(large){
+             max-width: 28rem;
+         }
+     }
+
+
+     &__card{
+         background-color: $grayMiddle;
+         padding: 0.625rem 1rem;
+         border-radius: 0.25rem;
+         width: 23%;
+
+         @include breakpoint-up(medium){
+             border-radius: 0.8125rem;
+             padding: 1.5rem 1.125rem 1rem; 
+         }
+     }
+
+     &__number{
+         font-size: 2rem;
+         font-weight: 700;
+         line-height: 3rem;
+         display: block;            
+         color: white;
+         @include breakpoint-up(medium){
+             font-size: 3.5rem;
+             line-height: 4rem;
+         }
+     }
+
+     &__units{
+         font-size: 0.75rem;
+         line-height: 1.75rem;
+         font-size: 700;
+         display: block;
+         color: $grayLighter;
+
+         @include breakpoint-up(medium){
+          font-size: 1rem;
+          line-height: 1.75rem;   
+         }
+     }
+
+     &--light{
+         .timer__card{
+             background-color: $primary4;
+         }
+
+         .timer__number{
+             color: $primary1;
+         }
+     }
+
+    }
