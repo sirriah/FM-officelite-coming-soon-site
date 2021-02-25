@@ -13,11 +13,12 @@
     }
 }
 
-// wrapping div
+// wrapping div - helps to position label tag
 .component-wrap{
     position: relative;
     height: 4.375rem;
     
+    // display label inside input
     label{
         position: absolute;
         font-size: 1rem;
@@ -28,6 +29,7 @@
 
 }
 
+// display label on top of input
 .normal label{
     transform: translateY(-1.7rem);
     font-size: 0.8rem;
@@ -49,6 +51,7 @@ input[type="text"], input[type="email"] {
     width: 100%;
     margin-bottom: 0.5rem;
   
+    // error look of the input 
     &.error {
       border-bottom: 1px solid $error;
       color: $error;
@@ -73,6 +76,8 @@ input[type="text"], input[type="email"] {
     color: $grayOpacity;
   }
   
+
+  // button design
   .button {
     padding: 0.875rem 2.5625rem;
     font-weight: 600;
