@@ -229,6 +229,10 @@ p {
   position: absolute;
   right: 1rem;
 }
+.custom-options__price {
+  color: rgba(116, 123, 149, 0.5);
+  padding-left: 0.5rem;
+}
 
 /*
 // https://moderncss.dev/custom-select-styles-with-pure-css/
@@ -282,7 +286,6 @@ input[type=text], input[type=email] {
 input[type=text].error, input[type=email].error {
   border-bottom: 1px solid #F05B5B;
   color: #F05B5B;
-  position: relative;
   background-image: url("./../assets/sign-up/icon-cross.svg");
   background-repeat: no-repeat;
   background-position: center right;

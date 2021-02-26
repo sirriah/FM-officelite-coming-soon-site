@@ -55,7 +55,6 @@ input[type="text"], input[type="email"] {
     &.error {
       border-bottom: 1px solid $error;
       color: $error;
-      position: relative;
       background-image: url("./../assets/sign-up/icon-cross.svg");
       background-repeat: no-repeat;
       background-position: center right;
