@@ -13,12 +13,12 @@
     }
 }
 
-// wrapping div - helps to position label tag
+// wrapping div - helps to position label tag - used for animation
 .component-wrap{
     position: relative;
     height: 4.375rem;
     
-    // display label inside input
+    // display label inside input - animation start point
     label{
         position: absolute;
         font-size: 1rem;
@@ -29,7 +29,7 @@
 
 }
 
-// display label on top of input
+// display label on top of input - animation end point
 .normal label{
     transform: translateY(-1.7rem);
     font-size: 0.8rem;
@@ -87,7 +87,7 @@ input[type="text"], input[type="email"] {
     display: inline-block;
     border: none;
     
-  
+   // different colors of the button
     &--dark-blue {
       color: white;
       background-color: $primary1;

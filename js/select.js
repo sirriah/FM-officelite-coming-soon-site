@@ -3,21 +3,20 @@ const selectTagText = document.querySelector(".custom-select__text");
 const selectAfterTag = document.querySelector(".custom-select::after");
 const options = document.getElementById("custom-options");
 const arrow = document.querySelector(".custom-select__arrow");
-//const optionsList = document.querySelectorAll(".custom-options div");
 const optionsList = document.getElementById("custom-options").children;
-//const singleOption = document.querySelector(".custom-options--is-selected");
+
 
 // display the options menu
 selectTag.addEventListener("click", function () {
   console.log("click on select");
-  //if (options.style.display == "block") {
+
     if (arrow.classList.contains('rotation')) {
-    //options.style.display = "none";
+
     options.classList.remove('fade-in');
     options.classList.add('fade-out');
     arrow.classList.remove("rotation");
   } else {
-   // options.style.display = "block";
+
    options.classList.remove('fade-out');
     options.classList.add('fade-in');
     arrow.classList.add("rotation");

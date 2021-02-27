@@ -1,3 +1,5 @@
+
+// background on the bottom of the page index.html
 .bg-footer{
     position: relative;
     background-color: $grayDarker;
@@ -18,7 +20,7 @@
     }
 }
 
-// design for price 
+// design for price list on index.html
 .price-table{
     position: absolute;
     width: 100%;
@@ -88,14 +90,83 @@
     }
 
     
-
+// the white column setup
     &--white{
-        @include price-card($grayMiddle, $grayLighter, white, $bg-image: false);
+        background-color: white;
+           
+        .version {
+            color: $grayMiddle;
+            margin: 0 0 2.5rem 0;
+            @include breakpoint-up(medium){
+                margin-bottom: 1rem;
+            }
+            @include breakpoint-up(large){
+                margin-bottom: 2.5rem;
+            }
+        }
+    
+        .price{
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 4rem;
+            color: $grayMiddle;
+            margin-bottom: 0.5rem;
+    
+        }
+    
+        .users{
+            color: $grayMiddle;
+            align-items: center;
+            margin-bottom: 3.5rem;
+            @include breakpoint-up(medium){
+                margin-bottom: 0rem;
+            }
+            @include breakpoint-up(large){
+                margin-bottom: 3.5rem;
+            }
+        }
+    
+        .info{
+            color: $grayLighter;
+            margin-bottom: 2rem;
+            br{
+                margin-bottom: 1rem;
+            }
+    
+            @include breakpoint-up(medium){
+                margin-bottom: 0.25rem;
+            }
+            @include breakpoint-up(large){
+                margin-bottom: 2rem;
+            }
+        }
+    
 
     }
 
+    // blue column extends the white column but change some properties
     &--blue{
-        @include price-card(white, $primary3, $primary1, $bg-image: true);
+        @extend .price-table--white;
+
+        background-color: $primary1;
+        background-image: url("./../assets/home/bg-pattern-pricing.svg");
+        background-position: center bottom;
+
+        .version{
+            color: white;
+        }
+
+        .price{
+            color: white;
+        }
+
+        .users{
+            color: white;
+        }
+
+        .info{
+            color: $primary3;
+        }
     }
 
     

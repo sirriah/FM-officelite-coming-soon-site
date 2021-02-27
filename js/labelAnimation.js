@@ -12,6 +12,7 @@ $('input').blur(function(){
   });  
 
 
+  // validation of email field
   $('#email').blur(function(){
     var inputValue = $(this).val();
     var regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
