@@ -134,6 +134,7 @@ p {
   border: none;
   color: transparent;
   overflow: hidden;
+  background: transparent;
 }
 
 .flex {
@@ -494,7 +495,7 @@ input[type=text].error, input[type=email].error {
 }
 
 .price-table {
-  position: absolute;
+  position: relative;
   width: 100%;
   transform: translateY(-50%);
   display: flex;

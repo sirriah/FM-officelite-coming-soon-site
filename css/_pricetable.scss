@@ -22,7 +22,7 @@
 
 // design for price list on index.html
 .price-table{
-    position: absolute;
+    position: relative;
     width: 100%;
     transform: translateY(-50%);
 
@@ -35,6 +35,7 @@
     }
     
     @include breakpoint-up(large){
+        
         flex-direction: row;
         justify-content: space-between;
     }
