@@ -14,5 +14,6 @@ This project is made with:
 - CSS (SCSS)
 - JS
 
-[Vercel](https://fm-officelite-coming-soon-site.vercel.app/)
-[Frontend Mentor](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g/hub/officelite-coming-soon-page-sass-mobile-first-cT6ixCjip)
+Live version on [Vercel](https://fm-officelite-coming-soon-site.vercel.app/)
+
+Project is from [Frontend Mentor](https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g/hub/officelite-coming-soon-page-sass-mobile-first-cT6ixCjip)
